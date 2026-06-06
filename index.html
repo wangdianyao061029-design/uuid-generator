@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Free online uuid generator tool. Local processing.">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9386949401677846" crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YP7EDZETJ3"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date());gtag("config","G-YP7EDZETJ3");</script>
+<title data-i18n="title">UUID Generator</title>
+<style>
+*,*::after,*::before{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;background:#fafafa;color:#1a1a2e;min-height:100vh}
+.container{max-width:600px;margin:0 auto;padding:24px 16px}
+header{text-align:center;padding:24px 0 8px;position:relative}
+header h1{font-size:28px;font-weight:700;background:linear-gradient(135deg,#06b6d4,#7c3aed);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+header p{color:#666;margin-top:4px;font-size:14px}
+.lang-switch{position:absolute;top:24px;right:0;display:flex;gap:2px;background:#eee;border-radius:16px;padding:2px}
+.lang-switch button{padding:5px 12px;border:none;border-radius:14px;font-size:12px;font-weight:600;cursor:pointer;background:transparent;color:#999;transition:all .2s}
+.lang-switch button.active{background:#fff;color:#333;box-shadow:0 1px 2px rgba(0,0,0,.1)}
+.tool-nav{background:#fff;border-radius:12px;padding:8px 12px;margin-bottom:16px;box-shadow:0 1px 3px rgba(0,0,0,.08);overflow-x:auto}
+.tool-nav>div{display:flex;gap:6px;align-items:center;font-size:12px;white-space:nowrap;min-width:max-content}
+.section{background:#fff;border-radius:12px;padding:20px;margin-bottom:16px;box-shadow:0 1px 3px rgba(0,0,0,.08)}
+textarea,input[type=text]{width:100%;padding:12px 14px;border:1px solid #d0d5dd;border-radius:8px;font-size:14px;font-family:"SF Mono","Fira Code",monospace;outline:none;transition:border-color .2s;margin-bottom:10px}
+textarea{height:120px;resize:vertical;line-height:1.6;font-size:13px}
+textarea:focus,input:focus{border-color:#06b6d4}
+.btn-row{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0}
+.btn{display:inline-flex;align-items:center;gap:5px;padding:8px 16px;border:none;border-radius:8px;font-size:13px;font-weight:600;cursor:pointer;transition:all .15s}
+.btn-primary{background:linear-gradient(135deg,#06b6d4,#7c3aed);color:#fff}
+.btn-primary:hover{opacity:.9}
+.btn-outline{background:#fff;border:1px solid #d0d5dd;color:#555}
+.btn-outline:hover{background:#f5f5f5}
+.btn-success{background:#10b981;color:#fff}
+.result{background:#f8f9ff;border-radius:8px;padding:14px;font-family:"SF Mono","Fira Code",monospace;font-size:14px;word-break:break-all;min-height:44px;margin-bottom:10px;color:#333}
+.color-preview{width:80px;height:80px;border-radius:12px;display:inline-block;border:1px solid #ddd;vertical-align:middle;margin-right:12px}
+.ads-placeholder{margin-top:24px;padding:20px;background:#fff;border-radius:12px;text-align:center;box-shadow:0 1px 3px rgba(0,0,0,.08);min-height:100px;overflow:hidden}
+.donation{margin-top:20px;padding:16px 20px;background:#fff;border-radius:12px;text-align:center;box-shadow:0 1px 3px rgba(0,0,0,.08)}
+.toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%);background:#333;color:#fff;padding:10px 24px;border-radius:20px;font-size:13px;opacity:0;transition:opacity .3s;pointer-events:none;z-index:99}
+.toast.show{opacity:1}
+footer{text-align:center;padding:24px 0;color:#999;font-size:12px}
+</style>
+</head>
+<body>
+<div class="container">
+<div class="tool-nav"><div><span style="font-weight:700;color:#333;margin-right:4px" data-i18n="toolsNav">🔧 免费工具：</span><a href="https://wangdianyao061029-design.github.io/" style="padding:4px 10px;border-radius:12px;text-decoration:none;color:#667eea;background:#667eea20;font-weight:600">🏠 首页</a><a href="https://wangdianyao061029-design.github.io/image-compressor/" style="padding:4px 10px;border-radius:12px;text-decoration:none;color:#667eea;background:#667eea20;font-weight:600">📦 压缩</a><a href="https://wangdianyao061029-design.github.io/json-formatter/" style="padding:4px 10px;border-radius:12px;text-decoration:none;color:#f5576c;background:#f5576c20;font-weight:600">{ } JSON</a><a href="https://wangdianyao061029-design.github.io/timestamp-converter/" style="padding:4px 10px;border-radius:12px;text-decoration:none;color:#6366f1;background:#6366f120;font-weight:600">⏱ 时间戳</a><a href="https://wangdianyao061029-design.github.io/base64-tool/" style="padding:4px 10px;border-radius:12px;text-decoration:none;color:#f59e0b;background:#f59e0b20;font-weight:600">🔐 Base64</a><a href="https://wangdianyao061029-design.github.io/qrcode-generator/" style="padding:4px 10px;border-radius:12px;text-decoration:none;color:#10b981;background:#10b98120;font-weight:600">📱 二维码</a><a href="https://wangdianyao061029-design.github.io/url-encoder/" style="padding:4px 10px;border-radius:12px;text-decoration:none;color:#8b5cf6;background:#8b5cf620;font-weight:600">🔗 URL</a><a href="https://wangdianyao061029-design.github.io/uuid-generator/" style="padding:4px 10px;border-radius:12px;text-decoration:none;color:#06b6d4;background:#06b6d420;font-weight:600;border:2px solid #06b6d4">生成器</a></div></div>
+<header>
+<div class="lang-switch"><button class="active" onclick="setLang("zh")">中</button><button onclick="setLang("en")">EN</button></div>
+<h1 data-i18n="h1">🆔 UUID 生成器</h1>
+<p data-i18n="subtitle">一键生成 UUID v4 · 纯本地处理</p>
+</header>
+<div class="section"><div class="result" id="result" style="text-align:center;font-size:18px;color:#333;cursor:pointer" onclick="copy(this.textContent)" title="点击复制">点击下方按钮生成</div><button class="btn btn-primary" onclick="generate()" data-i18n="generate" style="width:100%;justify-content:center">🎲 生成 UUID</button><button class="btn btn-outline" onclick="copy(document.getElementById("result").textContent)" data-i18n="copy" style="width:100%;margin-top:8px;justify-content:center">📋 复制</button></div>
+<div class="ads-placeholder" style="margin-top:24px;padding:20px;background:#fff;border-radius:12px;text-align:center;box-shadow:0 1px 3px rgba(0,0,0,.08);min-height:100px;overflow:hidden">
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9386949401677846" data-ad-slot="1234567890" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+<div class="donation"><div style="font-size:13px;font-weight:600;color:#666;margin-bottom:10px" data-i18n="buyCoffee">☕ 如果这个工具帮到了你，请我喝杯咖啡吧</div></div>
+</div>
+<div class="toast" id="toast"></div>
+<footer><p data-i18n="footer">所有处理均在浏览器本地完成。</p></footer>
+<script>
+const i18n={zh:{title:"🆔 UUID 生成器",h1:"🆔 UUID 生成器",subtitle:"一键生成 UUID v4 · 纯本地处理",toolsNav:"🔧 免费工具：",buyCoffee:"☕ 如果这个工具帮到了你，请我喝杯咖啡吧",footer:"所有处理均在浏览器本地完成。","generate":"🎲 生成 UUID","copy":"📋 复制","copied":"已复制 ✓","clickCopy":"点击复制"},en:{title:"UUID Generator",h1:"UUID Generator",subtitle:"One-click UUID v4 Generator · Local processing",toolsNav:"🔧 Free Tools:",buyCoffee:"☕ If this tool helped you, buy me a coffee",footer:"All processing is done locally in your browser.","generate":"🎲 Generate UUID","copy":"📋 Copy","copied":"Copied ✓","clickCopy":"Click to copy"}};
+let lang="zh";function t(k){return i18n[lang][k]||k}
+function setLang(l){lang=l;document.querySelectorAll(".lang-switch button").forEach(b=>b.classList.toggle("active",(b.textContent==="中"&&l==="zh")||(b.textContent==="EN"&&l==="en")));document.querySelectorAll("[data-i18n]").forEach(el=>{el.textContent=i18n[l][el.dataset.i18n]||el.textContent});document.title=i18n[l].title}
+function toast(m){clearTimeout(window._tt);document.getElementById("toast").textContent=m;document.getElementById("toast").classList.add("show");window._tt=setTimeout(()=>document.getElementById("toast").classList.remove("show"),2000)}
+function copy(v){if(!v){toast(t("noCopy"));return}navigator.clipboard.writeText(v).then(()=>toast(t("copied")))}
+function generate(){const id=crypto.randomUUID();document.getElementById("result").textContent=id;document.getElementById("result").style.color="#333";toast("Generated ✓")}generate()
+</script>
+</body>
+</html>
